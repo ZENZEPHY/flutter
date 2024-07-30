@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.red,
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
@@ -26,6 +26,16 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.green, appBar: AppBar());
+    return const Scaffold(
+      backgroundColor: Colors.green,
+      //appBar: AppBar(),
+      body: SafeArea(
+          child: Text('CrossRoads',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ))),
+    );
   }
 }
